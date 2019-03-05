@@ -1,0 +1,33 @@
+<div>
+  <div class="m-1 card border-dark w-50 ml-auto mr-auto">
+    <mat-card class="m-1">
+      <div class="row">
+        <div class="col-10">
+          <mat-form-field class="w-100">
+            <input autocomplete="off" matInput placeholder="Enter Exsisting Git User Name" [(ngModel)]="gitUserName">
+          </mat-form-field>
+        </div>
+        <div class="col-2">
+          <button mat-raised-button (click)="getGitUserDetails()">Search</button>
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="col-12">
+          <div class="ml-3" *ngIf="show">
+            <p>ID: {{getGitUserInfo?.id}}</p>
+            <p>Name: {{getGitUserInfo.login}}</p>
+            <p>No of Followers: {{getGitUserInfo?.followers}}</p>
+            <p>No of following: {{getGitUserInfo?.following}}</p>
+            <p>URL of the user:
+              <span class="btn btn-link">{{getGitUserInfo?.url}}</span>
+            </p>
+          </div>
+          <div *ngIf="showError" class="ml-auto mr-auto">
+            <h4 class="ml-3">{{ifError}}</h4>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
