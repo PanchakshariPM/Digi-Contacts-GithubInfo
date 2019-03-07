@@ -50,6 +50,12 @@ export class RestService {
       .pipe(map(this.extractData), catchError(this.handleError<any>('getGitUserDetails')));
   }
 
+  instagramInfo() {
+    return this.http
+      .get('./assets/response.json', {})
+      .pipe(map(this.extractData), catchError(this.handleError<any>('instagramInfo  ')));
+  }
+
   // Error handler block
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

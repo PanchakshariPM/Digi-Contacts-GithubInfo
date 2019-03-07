@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
-import { CreateContactComponent } from './create-contact/create-contact.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from "@angular/common/http";
@@ -23,7 +22,6 @@ import { GitDetailsComponent } from './git-details/git-details.component';
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    CreateContactComponent,
     HomeComponent,
     PageNotFoundComponent,
     ViewContactComponent,
